@@ -20,6 +20,20 @@
 		DC06DB6319FBD0B800EFCEFF /* top-bg-section.png in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB5E19FBD0B800EFCEFF /* top-bg-section.png */; };
 		DC06DB6419FBD0B800EFCEFF /* top-left.png in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB5F19FBD0B800EFCEFF /* top-left.png */; };
 		DC06DB6719FBD6D100EFCEFF /* top-right.png in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB6619FBD6D100EFCEFF /* top-right.png */; };
+		DC06DB6919FBDB2900EFCEFF /* PetsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC06DB6819FBDB2900EFCEFF /* PetsCollectionViewCell.swift */; };
+		DC06DB6B19FBDD4800EFCEFF /* peJs.json in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB6A19FBDD4800EFCEFF /* peJs.json */; };
+		DC06DB6D19FBDD6000EFCEFF /* pets in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB6C19FBDD6000EFCEFF /* pets */; };
+		DC06DB6F19FBE3C800EFCEFF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC06DB6E19FBE3C800EFCEFF /* DetailViewController.swift */; };
+		DC06DB7119FD3B0600EFCEFF /* petDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC06DB7019FD3B0600EFCEFF /* petDetailCell.swift */; };
+		DC06DB771A00C87900EFCEFF /* petListJs.json in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB761A00C87900EFCEFF /* petListJs.json */; };
+		DC06DB7B1A00CAF800EFCEFF /* pet_small in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB7A1A00CAF800EFCEFF /* pet_small */; };
+		DC06DB7D1A00CD2500EFCEFF /* petDetailInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB7C1A00CD2500EFCEFF /* petDetailInfo.json */; };
+		DC06DB7F1A04CDD500EFCEFF /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC06DB7E1A04CDD500EFCEFF /* Firebase.framework */; };
+		DC06DB811A04CE2900EFCEFF /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC06DB801A04CE2900EFCEFF /* libicucore.dylib */; };
+		DC06DB831A04CE3700EFCEFF /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC06DB821A04CE3700EFCEFF /* libc++.dylib */; };
+		DC06DB851A04CE3F00EFCEFF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC06DB841A04CE3F00EFCEFF /* CFNetwork.framework */; };
+		DC06DB871A04CE4500EFCEFF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC06DB861A04CE4500EFCEFF /* Security.framework */; };
+		DC06DB891A04CE5100EFCEFF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC06DB881A04CE5100EFCEFF /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +64,21 @@
 		DC06DB5E19FBD0B800EFCEFF /* top-bg-section.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-bg-section.png"; sourceTree = "<group>"; };
 		DC06DB5F19FBD0B800EFCEFF /* top-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-left.png"; sourceTree = "<group>"; };
 		DC06DB6619FBD6D100EFCEFF /* top-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-right.png"; sourceTree = "<group>"; };
+		DC06DB6819FBDB2900EFCEFF /* PetsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewCell.swift; sourceTree = "<group>"; };
+		DC06DB6A19FBDD4800EFCEFF /* peJs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = peJs.json; sourceTree = "<group>"; };
+		DC06DB6C19FBDD6000EFCEFF /* pets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pets; sourceTree = "<group>"; };
+		DC06DB6E19FBE3C800EFCEFF /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DC06DB7019FD3B0600EFCEFF /* petDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = petDetailCell.swift; sourceTree = "<group>"; };
+		DC06DB761A00C87900EFCEFF /* petListJs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = petListJs.json; sourceTree = "<group>"; };
+		DC06DB7A1A00CAF800EFCEFF /* pet_small */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pet_small; sourceTree = "<group>"; };
+		DC06DB7C1A00CD2500EFCEFF /* petDetailInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = petDetailInfo.json; sourceTree = "<group>"; };
+		DC06DB7E1A04CDD500EFCEFF /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		DC06DB801A04CE2900EFCEFF /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		DC06DB821A04CE3700EFCEFF /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		DC06DB841A04CE3F00EFCEFF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DC06DB861A04CE4500EFCEFF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DC06DB881A04CE5100EFCEFF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DC06DB8A1A04CED200EFCEFF /* 魔靈資訊-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "魔靈資訊-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +86,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC06DB891A04CE5100EFCEFF /* SystemConfiguration.framework in Frameworks */,
+				DC06DB871A04CE4500EFCEFF /* Security.framework in Frameworks */,
+				DC06DB851A04CE3F00EFCEFF /* CFNetwork.framework in Frameworks */,
+				DC06DB831A04CE3700EFCEFF /* libc++.dylib in Frameworks */,
+				DC06DB811A04CE2900EFCEFF /* libicucore.dylib in Frameworks */,
+				DC06DB7F1A04CDD500EFCEFF /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,9 +108,15 @@
 		DC06DB2919FBA6C100EFCEFF = {
 			isa = PBXGroup;
 			children = (
+				DC06DB881A04CE5100EFCEFF /* SystemConfiguration.framework */,
+				DC06DB861A04CE4500EFCEFF /* Security.framework */,
+				DC06DB841A04CE3F00EFCEFF /* CFNetwork.framework */,
+				DC06DB821A04CE3700EFCEFF /* libc++.dylib */,
+				DC06DB801A04CE2900EFCEFF /* libicucore.dylib */,
 				DC06DB3419FBA6C100EFCEFF /* 魔靈資訊 */,
 				DC06DB4C19FBA6C100EFCEFF /* 魔靈資訊Tests */,
 				DC06DB3319FBA6C100EFCEFF /* Products */,
+				DC06DB8A1A04CED200EFCEFF /* 魔靈資訊-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,9 +134,18 @@
 			children = (
 				DC06DB5919FBCD5800EFCEFF /* images */,
 				DC06DB3719FBA6C100EFCEFF /* AppDelegate.swift */,
+				DC06DB7E1A04CDD500EFCEFF /* Firebase.framework */,
 				DC06DB3919FBA6C100EFCEFF /* FirstViewController.swift */,
 				DC06DB3B19FBA6C100EFCEFF /* SecondViewController.swift */,
+				DC06DB7C1A00CD2500EFCEFF /* petDetailInfo.json */,
+				DC06DB7019FD3B0600EFCEFF /* petDetailCell.swift */,
+				DC06DB6C19FBDD6000EFCEFF /* pets */,
+				DC06DB6A19FBDD4800EFCEFF /* peJs.json */,
 				DC06DB3D19FBA6C100EFCEFF /* Main.storyboard */,
+				DC06DB761A00C87900EFCEFF /* petListJs.json */,
+				DC06DB7A1A00CAF800EFCEFF /* pet_small */,
+				DC06DB6E19FBE3C800EFCEFF /* DetailViewController.swift */,
+				DC06DB6819FBDB2900EFCEFF /* PetsCollectionViewCell.swift */,
 				DC06DB4019FBA6C100EFCEFF /* Images.xcassets */,
 				DC06DB4219FBA6C100EFCEFF /* LaunchScreen.xib */,
 				DC06DB3519FBA6C100EFCEFF /* Supporting Files */,
@@ -221,15 +271,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC06DB7D1A00CD2500EFCEFF /* petDetailInfo.json in Resources */,
+				DC06DB7B1A00CAF800EFCEFF /* pet_small in Resources */,
 				DC06DB6319FBD0B800EFCEFF /* top-bg-section.png in Resources */,
 				DC06DB6119FBD0B800EFCEFF /* bottom-bg.png in Resources */,
 				DC06DB6419FBD0B800EFCEFF /* top-left.png in Resources */,
 				DC06DB6719FBD6D100EFCEFF /* top-right.png in Resources */,
 				DC06DB3F19FBA6C100EFCEFF /* Main.storyboard in Resources */,
+				DC06DB6B19FBDD4800EFCEFF /* peJs.json in Resources */,
 				DC06DB6219FBD0B800EFCEFF /* btn-filter.png in Resources */,
 				DC06DB4419FBA6C100EFCEFF /* LaunchScreen.xib in Resources */,
+				DC06DB771A00C87900EFCEFF /* petListJs.json in Resources */,
 				DC06DB5B19FBCD8D00EFCEFF /* lanuch-img-iphone6-plus.png in Resources */,
 				DC06DB4119FBA6C100EFCEFF /* Images.xcassets in Resources */,
+				DC06DB6D19FBDD6000EFCEFF /* pets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +304,9 @@
 			files = (
 				DC06DB3C19FBA6C100EFCEFF /* SecondViewController.swift in Sources */,
 				DC06DB3819FBA6C100EFCEFF /* AppDelegate.swift in Sources */,
+				DC06DB6F19FBE3C800EFCEFF /* DetailViewController.swift in Sources */,
+				DC06DB6919FBDB2900EFCEFF /* PetsCollectionViewCell.swift in Sources */,
+				DC06DB7119FD3B0600EFCEFF /* petDetailCell.swift in Sources */,
 				DC06DB3A19FBA6C100EFCEFF /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,10 +431,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/魔靈資訊",
+				);
 				INFOPLIST_FILE = "魔靈資訊/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "魔靈資訊-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -385,10 +451,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/魔靈資訊",
+				);
 				INFOPLIST_FILE = "魔靈資訊/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "魔靈資訊-Bridging-Header.h";
 			};
 			name = Release;
 		};

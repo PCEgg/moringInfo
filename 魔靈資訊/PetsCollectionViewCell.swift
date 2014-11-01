@@ -10,4 +10,5 @@ import UIKit
 
 class PetsCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var petImg: UIImageView!
 }
