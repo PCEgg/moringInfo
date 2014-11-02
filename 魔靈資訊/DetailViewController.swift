@@ -29,9 +29,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
         var testPath = getPetInfo["m_id"] as String!
         
-        if let petBigImg = petInfo["imgBigUrl"] as? String{
-            petDetailImg.image = UIImage(named: petBigImg)
-        }
+
         
         var refShow = Firebase(url:"https://infomorning.firebaseio.com/message/petMessage/petID/")
         
@@ -50,16 +48,21 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
         var showMessage = Firebase(url:"https://infomorning.firebaseio.com/message/petMessage/petID/" + testPath!)
         
-        println(showMessage)
         
         showMessage.observeEventType(.ChildAdded, withBlock: { snapshot in
-            println(snapshot.value.objectForKey("title") as String)
-            
+           self.petMessageDictionary["title"] = snapshot.value.objectForKey("title") as String
+            self.petMessageDictionary["author"] = snapshot.value.objectForKey("title") as String
+            //println(self.petMessageDictionary["title"])
         })
         
         
         
         jsonResponsePetDetail()
+        
+        if let petBigImg = petInfoDictionary["m_pic"] as? String{
+            //println(petBigImg)
+            petDetailImg.image = UIImage(named: petBigImg)
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -74,21 +77,18 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 4
+        return 6
     }
     
     // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
     // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        //let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "petCell")
-        //let cell : petDetailCell! = tableView.dequeueReusableCellWithIdentifier("petCell") as petDetailCell
-
-        
         
         var cell: petDetailCell = tableView.dequeueReusableCellWithIdentifier("petCellContent") as petDetailCell
         
-        println(indexPath.row)
+        var messageCell: petDetailCell = tableView.dequeueReusableCellWithIdentifier("messageCellContent") as petDetailCell
+        
         
         if(indexPath.row == 0){
         
@@ -128,12 +128,31 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                 
             }
             
+        } else {
+            //println(petMessageDictionary["author"])
+            if let petMessageUser = petMessageDictionary["author"] as? String{
+                messageCell.petMessageContent.text = petMessageUser
+            }
+            if let petMessageContent = petMessageDictionary["title"] as? String{
+                messageCell.petMessageContent.text = petMessageContent
+            }
         }
         cell.skillName.numberOfLines = 0
         cell.skillContent.numberOfLines = 0
         cell.skillContent.sizeToFit()
-        return cell
-
+        
+        messageCell.petMessageUser.numberOfLines = 0
+        messageCell.petMessageContent.numberOfLines = 0
+        messageCell.petMessageContent.sizeToFit()
+        
+        if(indexPath.row <= 3){
+            return cell
+        } else {
+            return messageCell
+        }
+        
+        //return cell
+        
     }
     
     // ========== Get JSON Data From Local ==============//
@@ -159,9 +178,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                         var selectedPetID = getPetInfo["m_id"] as String!
                         var showDetailID = getMonsterDetail[0]["m_id"] as String!
                         if (selectedPetID == showDetailID){
-                            
+                            //println(getMonsterDetail[0]["m_pic"])
                             // ========= Assign to Dictionary =============//
-                            
+                            petInfoDictionary["m_pic"] = getMonsterDetail[0]["m_pic"] as String!
                             petInfoDictionary["m_atk"] = getMonsterDetail[0]["m_atk"] as String!
                             petInfoDictionary["m_def"] = getMonsterDetail[0]["m_def"] as String!
                             petInfoDictionary["m_hp"] = getMonsterDetail[0]["m_hp"] as String!

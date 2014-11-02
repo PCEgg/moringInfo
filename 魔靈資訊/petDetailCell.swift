@@ -10,6 +10,8 @@ import UIKit
 
 class petDetailCell: UITableViewCell {
 
+    @IBOutlet weak var petMessageUser: UILabel!
+    @IBOutlet weak var petMessageContent: UILabel!
     @IBOutlet weak var skillName: UILabel!
     @IBOutlet weak var skillContent: UILabel!
     
