@@ -9,6 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var pagePetName: UILabel!
 
     @IBOutlet weak var petDetilTable: UITableView!
     @IBOutlet weak var petDetailImg: UIImageView!
@@ -18,8 +19,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     var giveMePetInfo : [String] = []
     var getCountArray : Int = 0
     
-    var ref = Firebase(url:"https://infomorning.firebaseio.com/message/petMessage/petID")
-    
     var petInfoDictionary = Dictionary<String, AnyObject>()
     
     var petMessageDictionary = Dictionary<String, AnyObject>()
@@ -28,34 +27,12 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         
         var testPath = getPetInfo["m_id"] as String!
+        var petName = getPetInfo["m_name"] as String!
         
+        pagePetName.text = petName
 
-        
-        var refShow = Firebase(url:"https://infomorning.firebaseio.com/message/petMessage/petID/")
-        
-        
-        
-        //refShow.setValue("Hey man")
-        
-        //var postRef = refShow.childByAppendingPath(testPath)
-        //var post1 = ["author": "gracehop", "title": "Announcing COBOL, a New Programming Language"]
-        //var post1Ref = postRef.childByAutoId()
-        //println(post1Ref)
-        //println(post1)
-        //post1Ref.setValue(post1)
-        
-        //println(post1Ref.name)
-        
-        var showMessage = Firebase(url:"https://infomorning.firebaseio.com/message/petMessage/petID/" + testPath!)
-        
-        
-        showMessage.observeEventType(.ChildAdded, withBlock: { snapshot in
-           self.petMessageDictionary["title"] = snapshot.value.objectForKey("title") as String
-            self.petMessageDictionary["author"] = snapshot.value.objectForKey("title") as String
-            //println(self.petMessageDictionary["title"])
-        })
-        
-        
+        // ======= set background image ========= //
+        self.petDetilTable.backgroundView = UIImageView(image: UIImage(named: "detailBg.png"))
         
         jsonResponsePetDetail()
         
@@ -63,6 +40,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             //println(petBigImg)
             petDetailImg.image = UIImage(named: petBigImg)
         }
+        
+        self.petDetilTable.estimatedRowHeight = 77.0
+        self.petDetilTable.rowHeight = UITableViewAutomaticDimension
 
         // Do any additional setup after loading the view.
     }
@@ -77,58 +57,58 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 6
+        return 4
     }
     
-    // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-    // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
         var cell: petDetailCell = tableView.dequeueReusableCellWithIdentifier("petCellContent") as petDetailCell
         
-        var messageCell: petDetailCell = tableView.dequeueReusableCellWithIdentifier("messageCellContent") as petDetailCell
+        //println(indexPath.row)
+        
+        //var messageCell: petDetailCell = tableView.dequeueReusableCellWithIdentifier("messageCellContent") as petDetailCell
         
         
         if(indexPath.row == 0){
         
-        if let petSkillName = petInfoDictionary["skillName1"] as? String{
-            cell.skillName.text = petSkillName
-        }
+        cell.skillName.text = "隊長技"
+        
         
         if let petSkill = petInfoDictionary["skill1"] as? String{
             cell.skillContent.text = petSkill
             }
         } else if (indexPath.row == 1){
-            if let petSkillName = petInfoDictionary["skillName2"] as? String{
-                cell.skillName.text = petSkillName
-            }
+                cell.skillName.text = "技能一"
             
             if let petSkill = petInfoDictionary["skill2"] as? String{
                 cell.skillContent.text = petSkill
+            } else {
+                
+                cell.skillContent.text = "沒有"
             }
             
         } else if (indexPath.row == 2){
-            if let petSkillName = petInfoDictionary["skillName3"] as? String{
-                cell.skillName.text = petSkillName
-            }
+                cell.skillName.text = "技能二"
             
             if let petSkill = petInfoDictionary["skill3"] as? String{
                 cell.skillContent.text = petSkill
+            } else {
+                
+                cell.skillContent.text = "沒有"
             }
             
         } else if (indexPath.row == 3){
-            if let petSkillName = petInfoDictionary["skillName4"] as? String{
-                cell.skillName.text = petSkillName
-            }
+                cell.skillName.text = "技能三"
             
             if let petSkill = petInfoDictionary["skill4"] as? String{
-                
                 cell.skillContent.text = petSkill
-                
+            } else {
+            
+                cell.skillContent.text = "沒有"
             }
             
-        } else {
+        } /*else {
             //println(petMessageDictionary["author"])
             if let petMessageUser = petMessageDictionary["author"] as? String{
                 messageCell.petMessageContent.text = petMessageUser
@@ -137,22 +117,45 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                 messageCell.petMessageContent.text = petMessageContent
             }
         }
+*/
         cell.skillName.numberOfLines = 0
         cell.skillContent.numberOfLines = 0
         cell.skillContent.sizeToFit()
+        cell.backgroundColor = UIColor.clearColor()
         
-        messageCell.petMessageUser.numberOfLines = 0
+        /*messageCell.petMessageUser.numberOfLines = 0
         messageCell.petMessageContent.numberOfLines = 0
-        messageCell.petMessageContent.sizeToFit()
+        messageCell.petMessageContent.sizeToFit()*/
         
-        if(indexPath.row <= 3){
+        /*if(indexPath.row <= 3){
             return cell
         } else {
             return messageCell
-        }
+        }*/
         
-        //return cell
+        return cell
         
+    }
+    
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerImg = UIImageView(image: UIImage(named: "skillHeader"))
+        
+        return headerImg
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat{
+        return 30
+    }
+    
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerImg = UIImageView(image: UIImage(named: "skillFooter"))
+        
+        return footerImg
+    }
+    
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat{
+        return 30
     }
     
     // ========== Get JSON Data From Local ==============//
@@ -226,6 +229,8 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
     }
+    
+    
     
     // ========== Geted =================================//
 

@@ -11,7 +11,6 @@
 		DC06DB3A19FBA6C100EFCEFF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC06DB3919FBA6C100EFCEFF /* FirstViewController.swift */; };
 		DC06DB3C19FBA6C100EFCEFF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC06DB3B19FBA6C100EFCEFF /* SecondViewController.swift */; };
 		DC06DB3F19FBA6C100EFCEFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB3D19FBA6C100EFCEFF /* Main.storyboard */; };
-		DC06DB4119FBA6C100EFCEFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB4019FBA6C100EFCEFF /* Images.xcassets */; };
 		DC06DB4419FBA6C100EFCEFF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB4219FBA6C100EFCEFF /* LaunchScreen.xib */; };
 		DC06DB5019FBA6C100EFCEFF /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC06DB4F19FBA6C100EFCEFF /* ____Tests.swift */; };
 		DC06DB5B19FBCD8D00EFCEFF /* lanuch-img-iphone6-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB5A19FBCD8D00EFCEFF /* lanuch-img-iphone6-plus.png */; };
@@ -35,6 +34,11 @@
 		DC06DB891A04CE5100EFCEFF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC06DB881A04CE5100EFCEFF /* SystemConfiguration.framework */; };
 		DC06DB8F1A062A9B00EFCEFF /* pet_big in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB8E1A062A9B00EFCEFF /* pet_big */; };
 		DC06DB911A062AAE00EFCEFF /* pet-skill-detail-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DC06DB901A062AAE00EFCEFF /* pet-skill-detail-bg.png */; };
+		DCA3145B1A087B320073C4B7 /* userMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA3145A1A087B320073C4B7 /* userMessageCell.swift */; };
+		DCF5B9D51A06966900B53690 /* pet-skill-detail-bg-top.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5B9D21A06966900B53690 /* pet-skill-detail-bg-top.png */; };
+		DCF5B9D81A0697EB00B53690 /* pet-skill-detail-bg-bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5B9D61A0697EB00B53690 /* pet-skill-detail-bg-bottom.png */; };
+		DCF5B9D91A0697EB00B53690 /* pet-skill-detail-bg-center.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5B9D71A0697EB00B53690 /* pet-skill-detail-bg-center.png */; };
+		DCF5B9DB1A06992C00B53690 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF5B9DA1A06992C00B53690 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +58,6 @@
 		DC06DB3919FBA6C100EFCEFF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		DC06DB3B19FBA6C100EFCEFF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DC06DB3E19FBA6C100EFCEFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DC06DB4019FBA6C100EFCEFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DC06DB4319FBA6C100EFCEFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DC06DB4919FBA6C100EFCEFF /* 魔靈資訊Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "魔靈資訊Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC06DB4E19FBA6C100EFCEFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +84,11 @@
 		DC06DB8A1A04CED200EFCEFF /* 魔靈資訊-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "魔靈資訊-Bridging-Header.h"; sourceTree = "<group>"; };
 		DC06DB8E1A062A9B00EFCEFF /* pet_big */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pet_big; sourceTree = "<group>"; };
 		DC06DB901A062AAE00EFCEFF /* pet-skill-detail-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pet-skill-detail-bg.png"; sourceTree = "<group>"; };
+		DCA3145A1A087B320073C4B7 /* userMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userMessageCell.swift; sourceTree = "<group>"; };
+		DCF5B9D21A06966900B53690 /* pet-skill-detail-bg-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pet-skill-detail-bg-top.png"; sourceTree = "<group>"; };
+		DCF5B9D61A0697EB00B53690 /* pet-skill-detail-bg-bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pet-skill-detail-bg-bottom.png"; sourceTree = "<group>"; };
+		DCF5B9D71A0697EB00B53690 /* pet-skill-detail-bg-center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pet-skill-detail-bg-center.png"; sourceTree = "<group>"; };
+		DCF5B9DA1A06992C00B53690 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,17 +146,18 @@
 				DC06DB3719FBA6C100EFCEFF /* AppDelegate.swift */,
 				DC06DB7E1A04CDD500EFCEFF /* Firebase.framework */,
 				DC06DB3919FBA6C100EFCEFF /* FirstViewController.swift */,
-				DC06DB3B19FBA6C100EFCEFF /* SecondViewController.swift */,
-				DC06DB7C1A00CD2500EFCEFF /* petDetailInfo.json */,
-				DC06DB8E1A062A9B00EFCEFF /* pet_big */,
-				DC06DB7019FD3B0600EFCEFF /* petDetailCell.swift */,
-				DC06DB6A19FBDD4800EFCEFF /* peJs.json */,
-				DC06DB3D19FBA6C100EFCEFF /* Main.storyboard */,
-				DC06DB761A00C87900EFCEFF /* petListJs.json */,
-				DC06DB7A1A00CAF800EFCEFF /* pet_small */,
 				DC06DB6E19FBE3C800EFCEFF /* DetailViewController.swift */,
+				DC06DB3B19FBA6C100EFCEFF /* SecondViewController.swift */,
+				DCA3145A1A087B320073C4B7 /* userMessageCell.swift */,
+				DC06DB7019FD3B0600EFCEFF /* petDetailCell.swift */,
 				DC06DB6819FBDB2900EFCEFF /* PetsCollectionViewCell.swift */,
-				DC06DB4019FBA6C100EFCEFF /* Images.xcassets */,
+				DC06DB3D19FBA6C100EFCEFF /* Main.storyboard */,
+				DCF5B9DA1A06992C00B53690 /* Images.xcassets */,
+				DC06DB6A19FBDD4800EFCEFF /* peJs.json */,
+				DC06DB7C1A00CD2500EFCEFF /* petDetailInfo.json */,
+				DC06DB761A00C87900EFCEFF /* petListJs.json */,
+				DC06DB8E1A062A9B00EFCEFF /* pet_big */,
+				DC06DB7A1A00CAF800EFCEFF /* pet_small */,
 				DC06DB4219FBA6C100EFCEFF /* LaunchScreen.xib */,
 				DC06DB3519FBA6C100EFCEFF /* Supporting Files */,
 			);
@@ -183,7 +192,10 @@
 		DC06DB5919FBCD5800EFCEFF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DCF5B9D21A06966900B53690 /* pet-skill-detail-bg-top.png */,
 				DC06DB5C19FBD0B800EFCEFF /* bottom-bg.png */,
+				DCF5B9D61A0697EB00B53690 /* pet-skill-detail-bg-bottom.png */,
+				DCF5B9D71A0697EB00B53690 /* pet-skill-detail-bg-center.png */,
 				DC06DB901A062AAE00EFCEFF /* pet-skill-detail-bg.png */,
 				DC06DB5D19FBD0B800EFCEFF /* btn-filter.png */,
 				DC06DB5E19FBD0B800EFCEFF /* top-bg-section.png */,
@@ -279,16 +291,19 @@
 				DC06DB6319FBD0B800EFCEFF /* top-bg-section.png in Resources */,
 				DC06DB6119FBD0B800EFCEFF /* bottom-bg.png in Resources */,
 				DC06DB6419FBD0B800EFCEFF /* top-left.png in Resources */,
+				DCF5B9D51A06966900B53690 /* pet-skill-detail-bg-top.png in Resources */,
 				DC06DB8F1A062A9B00EFCEFF /* pet_big in Resources */,
 				DC06DB6719FBD6D100EFCEFF /* top-right.png in Resources */,
 				DC06DB3F19FBA6C100EFCEFF /* Main.storyboard in Resources */,
+				DCF5B9DB1A06992C00B53690 /* Images.xcassets in Resources */,
 				DC06DB6B19FBDD4800EFCEFF /* peJs.json in Resources */,
 				DC06DB6219FBD0B800EFCEFF /* btn-filter.png in Resources */,
 				DC06DB911A062AAE00EFCEFF /* pet-skill-detail-bg.png in Resources */,
 				DC06DB4419FBA6C100EFCEFF /* LaunchScreen.xib in Resources */,
+				DCF5B9D91A0697EB00B53690 /* pet-skill-detail-bg-center.png in Resources */,
 				DC06DB771A00C87900EFCEFF /* petListJs.json in Resources */,
+				DCF5B9D81A0697EB00B53690 /* pet-skill-detail-bg-bottom.png in Resources */,
 				DC06DB5B19FBCD8D00EFCEFF /* lanuch-img-iphone6-plus.png in Resources */,
-				DC06DB4119FBA6C100EFCEFF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +325,7 @@
 				DC06DB3819FBA6C100EFCEFF /* AppDelegate.swift in Sources */,
 				DC06DB6F19FBE3C800EFCEFF /* DetailViewController.swift in Sources */,
 				DC06DB6919FBDB2900EFCEFF /* PetsCollectionViewCell.swift in Sources */,
+				DCA3145B1A087B320073C4B7 /* userMessageCell.swift in Sources */,
 				DC06DB7119FD3B0600EFCEFF /* petDetailCell.swift in Sources */,
 				DC06DB3A19FBA6C100EFCEFF /* FirstViewController.swift in Sources */,
 			);
@@ -522,6 +538,7 @@
 				DC06DB5519FBA6C100EFCEFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC06DB5619FBA6C100EFCEFF /* Build configuration list for PBXNativeTarget "魔靈資訊Tests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +547,7 @@
 				DC06DB5819FBA6C100EFCEFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

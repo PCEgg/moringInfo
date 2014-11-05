@@ -1,25 +1,27 @@
-    //
-//  petDetailCell.swift
+//
+//  userMessageCell.swift
 //  魔靈資訊
 //
-//  Created by CK Lam on 26/10/14.
+//  Created by CK Lam on 4/11/14.
 //  Copyright (c) 2014 CK Lam. All rights reserved.
 //
 
 import UIKit
 
-class petDetailCell: UITableViewCell {
+class userMessageCell: UITableViewCell {
 
-    @IBOutlet weak var petMessageUser: UILabel!
-    @IBOutlet weak var petMessageContent: UILabel!
-    @IBOutlet weak var skillName: UILabel!
-    @IBOutlet weak var skillContent: UILabel!
+    @IBOutlet weak var userPet: UIImageView!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userMessageContent: UILabel!
+    
+    var TotalMessageCount = 0;
+    
+    var countMe : [String] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-    }
+    }    
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -16,6 +16,7 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
     var petImg: [String] = []
     var petName: [String] = []
     // ======= init Value end ======= //
+    
 
     @IBOutlet weak var petCollect: UICollectionView!
     override func viewDidLoad() {
