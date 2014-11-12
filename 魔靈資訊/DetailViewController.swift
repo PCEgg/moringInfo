@@ -25,6 +25,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
   
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         var testPath = getPetInfo["m_id"] as String!
         var petName = getPetInfo["m_name"] as String!

@@ -8,13 +8,19 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class FirstViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, DataEnteredDelegate{
     
     // ======= init Value =========== //
     var arr: AnyObject = []
+    var filteredArr: AnyObject = []
     var namesID: [String] = []
     var petImg: [String] = []
     var petName: [String] = []
+    var forTesting: String = ""
+    var forTestingCount: Int = 0
+    var userDataEntered: Bool = false
+    var letMeDie: [String] = []
+    var letMeDieNum: [String] = []
     // ======= init Value end ======= //
     
 
@@ -23,7 +29,8 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         jsonResponse()
-    }
+        filteredArr = arr
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,6 +45,7 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+
         return petImg.count
     }
     
@@ -46,8 +54,8 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as
             PetsCollectionViewCell
+
         cell.petImg.image = UIImage(named: petImg[indexPath.row])
-        
         
         return cell
         
@@ -55,8 +63,7 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        let selectedImg = petImg[indexPath.row]
-        
+        let selectedImg = petCollect.cellForItemAtIndexPath(indexPath)
         
     }
     
@@ -64,13 +71,33 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         if(segue.identifier == "petDetailSection"){
             
+            //let indexPath = self.tableView.indexPathForSelectedRow()
+            //let post = myCollection[indexPath!.row].id
+            
             let detailVC = segue.destinationViewController as DetailViewController
-            let selectedItems:NSArray = petCollect.indexPathsForSelectedItems()!
-            let selectedItem:NSIndexPath = selectedItems[0] as NSIndexPath
+            
+            var selectedItems:NSArray = petCollect.indexPathsForSelectedItems()!
+            var selectedItem:NSIndexPath = selectedItems[0] as NSIndexPath
             
             let selectedPhotoIndex = selectedItem.row
             
-            detailVC.getPetInfo = arr[selectedPhotoIndex]
+            
+            if(letMeDieNum.isEmpty){
+                detailVC.getPetInfo = filteredArr[selectedPhotoIndex]
+            } else{
+                let hihiPoint = letMeDieNum[selectedPhotoIndex].toInt()
+                detailVC.getPetInfo = filteredArr[hihiPoint!]
+                
+            }
+            
+            
+
+        }
+        
+        if(segue.identifier == "showFilter"){
+            
+            let filterVC = segue.destinationViewController as FilterViewController
+            filterVC.delegate = self
             
         }
         
@@ -92,13 +119,10 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
                     
                     arr = wholePetDetail
                     
-                    //println(wholePetDetail)
-                    
                     var showHowManyItems = wholePetDetail.count
                     for(var i = 0; i < showHowManyItems; i++){
                         if let petDetail = wholePetDetail[i] as? NSDictionary{
     
-                            
                             let petSmallPic : AnyObject? = petDetail["m_pic"]
                             
                             petImg.append(petSmallPic as String)
@@ -107,12 +131,9 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
                             
                             petName.append(getPetName as String)
                             
-                            
-                            
                         }
                     }
-                    
-                    //println(petName)
+
                 }
             }
         }
@@ -120,7 +141,46 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     // ========== Geted =================================//
+    override func viewWillAppear(animated: Bool) {
+       //self.petCollect.reloadData()
+    }
+    
+    
+    // ========== Get search result ====================//
 
+    func userDidEnteredInformation(info: NSString) {
+        filteredArr = arr
+        
+        var showHowManyItems = filteredArr.count
+        if(info == "1" || info == "2" || info == "3" || info == "4" || info == "5" || info == "6"){
+        petImg.removeAll()
+            //println(filteredArr)
+            
+            for(var i = 0; i < showHowManyItems; i++){
+                
+            
+            if let petDetail = arr[i] as? NSDictionary{
+                
+
+                if( info == petDetail["m_star"] as String){
+                    
+                    
+                    let petSmallPic : AnyObject? = petDetail["m_pic"]
+                    
+                    petImg.append(petSmallPic as String)
+                    
+                    letMeDieNum.append(String(i))
+
+                }
+            }
+        }
+        }
+        self.petCollect.reloadData()
+        //self.petCollect.reloadItemsAtIndexPaths(<#indexPaths: [AnyObject]#>)
+    }
+    
+
+     // ========== Get search result end =============//
 
 }
 
